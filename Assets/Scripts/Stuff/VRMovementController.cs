@@ -21,6 +21,18 @@ public class VRMovementController : MonoBehaviour
         }
     }
 
+    float _controllersAngle
+    {
+        get
+        {
+            Vector3 controllersAxis = _rightController.transform.position - _leftController.transform.position;
+            controllersAxis.y = 0.0f;
+
+            float angle = Vector3.Angle(controllersAxis, transform.right);
+            return Vector3.Dot(controllersAxis, transform.forward) < 0 ? -angle : angle;
+        }
+    }
+
     public float speed = 1.0f;
     public Vector2 scaleRange = new Vector2(1.0f, 20.0f);
 
@@ -34,6 +46,9 @@ public class VRMovementController : MonoBehaviour
 
     float _deltaControllersDistance;
     float _lastControllersDistance;
+
+    float _deltaControllersAngle;
+    float _lastControllersAngle;
 
     bool _leftPressed;
     bool _rightPressed;
@@ -55,34 +70,50 @@ public class VRMovementController : MonoBehaviour
     
 	void Update ()
     {
+        // Handle input
         _leftPressed = _leftController.isValid && _leftController.device.GetPress(SteamVR_Controller.ButtonMask.Grip);
         _rightPressed = _rightController.isValid && _rightController.device.GetPress(SteamVR_Controller.ButtonMask.Grip);
     }
 
     void FixedUpdate()
     {
-        _deltaMiddlePosition = _middlePosition - _lastMiddlePosition;
-        _lastMiddlePosition = _middlePosition;
+        // Calculate deltas
+        Vector3 middlePosition = _middlePosition;
+        _deltaMiddlePosition = middlePosition - _lastMiddlePosition;
+        _lastMiddlePosition = middlePosition;
 
-        _deltaControllersDistance = _controllersDistance - _lastControllersDistance;
-        _lastControllersDistance = _controllersDistance;
+        float controllersDistance = _controllersDistance;
+        _deltaControllersDistance = controllersDistance - _lastControllersDistance;
+        _lastControllersDistance = controllersDistance;
 
+        float controllersAngle = _controllersAngle;
+        _deltaControllersAngle = controllersAngle - _lastControllersAngle;
+        _lastControllersAngle = controllersAngle;
+
+        // Handle movement
         if (_leftPressed || _rightPressed)
         {
             Vector3 delta;
 
             if (_leftPressed && _rightPressed)
             {
-                Vector3 A = transform.position;
-                Vector3 B = _middlePosition;
+                delta = _deltaMiddlePosition;
 
+                // Rotate
+                Vector3 controllersMiddle = (_leftController.transform.position + _rightController.transform.position) * 0.5f;
+                Vector3 direction = transform.position - controllersMiddle;
+                direction = Quaternion.Euler(0.0f, _deltaControllersAngle, 0.0f) * direction;
+                transform.position = controllersMiddle + direction;
+                Vector3 eulerAngles = transform.rotation.eulerAngles;
+                eulerAngles.y += _deltaControllersAngle;
+                transform.rotation = Quaternion.Euler(eulerAngles);
+
+                // Relative scale
                 float scale = Mathf.Clamp(transform.localScale.x - _deltaControllersDistance * speed * 10.0f, scaleRange.x, scaleRange.y);
                 float relativeScale = scale / transform.localScale.x;
 
                 transform.localScale = Vector3.one * scale;
-                transform.position = B + (A - B) * relativeScale;
-
-                delta = _deltaMiddlePosition;
+                transform.position = controllersMiddle + (transform.position - controllersMiddle) * relativeScale;
             }
             else if (_leftPressed)
             {
@@ -93,7 +124,7 @@ public class VRMovementController : MonoBehaviour
                 delta = _rightController.deltaPosition;
             }
 
-            transform.position -= delta * speed * transform.localScale.x;
+            transform.position -= transform.rotation * (delta * speed * transform.localScale.x);
         }
     }
 }
