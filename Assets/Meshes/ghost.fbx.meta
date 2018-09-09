@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: 101d8f643101b5f4dbebafc1c331f672
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: archer_hat
+    100002: arm_left
+    100004: arm_right
+    100006: Armature
+    100008: back
+    100010: back.001
+    100012: back.001_end
+    100014: bow
+    100016: //RootNode
+    100018: ghost
+    100020: hand_left
+    100022: hand_right
+    100024: head
+    100026: helmet
+    100028: helmet 1
+    100030: helmet_end
+    100032: rag_bottom_back_left
+    100034: rag_bottom_back_left_end
+    100036: rag_bottom_back_right
+    100038: rag_bottom_back_right_end
+    100040: rag_bottom_front_left
+    100042: rag_bottom_front_left_end
+    100044: rag_bottom_front_right
+    100046: rag_bottom_front_right_end
+    100048: rag_middle_back_left
+    100050: rag_middle_back_right
+    100052: rag_middle_front_left
+    100054: rag_middle_front_right
+    100056: rag_root_back
+    100058: rag_root_front
+    100060: rag_top_back
+    100062: rag_top_front
+    100064: root
+    100066: shield
+    100068: shoulder_left
+    100070: shoulder_right
+    100072: sword
+    100074: weapon_left
+    100076: weapon_left_end
+    100078: weapon_right
+    100080: weapon_right_end
+    400000: archer_hat
+    400002: arm_left
+    400004: arm_right
+    400006: Armature
+    400008: back
+    400010: back.001
+    400012: back.001_end
+    400014: bow
+    400016: //RootNode
+    400018: ghost
+    400020: hand_left
+    400022: hand_right
+    400024: head
+    400026: helmet
+    400028: helmet 1
+    400030: helmet_end
+    400032: rag_bottom_back_left
+    400034: rag_bottom_back_left_end
+    400036: rag_bottom_back_right
+    400038: rag_bottom_back_right_end
+    400040: rag_bottom_front_left
+    400042: rag_bottom_front_left_end
+    400044: rag_bottom_front_right
+    400046: rag_bottom_front_right_end
+    400048: rag_middle_back_left
+    400050: rag_middle_back_right
+    400052: rag_middle_front_left
+    400054: rag_middle_front_right
+    400056: rag_root_back
+    400058: rag_root_front
+    400060: rag_top_back
+    400062: rag_top_front
+    400064: root
+    400066: shield
+    400068: shoulder_left
+    400070: shoulder_right
+    400072: sword
+    400074: weapon_left
+    400076: weapon_left_end
+    400078: weapon_right
+    400080: weapon_right_end
+    2100000: No Name
+    2300000: archer_hat
+    2300002: bow
+    2300004: helmet
+    2300006: shield
+    2300008: sword
+    3300000: archer_hat
+    3300002: bow
+    3300004: helmet
+    3300006: shield
+    3300008: sword
+    4300000: bow
+    4300002: archer_hat
+    4300004: helmet
+    4300006: shield
+    4300008: sword
+    4300010: ghost
+    7400000: walk
+    7400002: die
+    7400004: hit
+    7400006: idle
+    9500000: //RootNode
+    13700000: ghost
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: die
+      takeName: die
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit
+      takeName: hit
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
