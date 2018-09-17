@@ -7,20 +7,25 @@ ModelImporter:
     100002: Cover
     100004: Pages
     100006: Canvas
+    100008: CanvasCollision
     400000: //RootNode
     400002: Cover
     400004: Pages
     400006: Canvas
+    400008: CanvasCollision
     2100000: No Name
     2300000: Cover
     2300002: Pages
     2300004: Canvas
+    2300006: CanvasCollision
     3300000: Cover
     3300002: Pages
     3300004: Canvas
+    3300006: CanvasCollision
     4300000: Pages
     4300002: Cover
     4300004: Canvas
+    4300006: CanvasCollision
   externalObjects: {}
   materials:
     importMaterials: 0
